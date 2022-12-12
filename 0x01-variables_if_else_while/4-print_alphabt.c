@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main- point one 
+ * main- point one
  *
  * Return: Always 0 (success)
  */
