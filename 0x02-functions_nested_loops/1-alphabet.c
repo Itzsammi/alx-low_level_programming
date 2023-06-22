@@ -2,16 +2,13 @@
 /**
 * print_alphabet - Prints the lowercase alphabet followed by a new line.
 */
-int main(void)
+void print_alphabet(void)
 {
-	char letter = 'a';
-	while
-		(letter <= 'z');
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		_putchar(letter);
-		letter++;
+		_putchar(c);
 	}
 	_putchar('\n');
-	print_alphabet();
-	return (0);
 }
