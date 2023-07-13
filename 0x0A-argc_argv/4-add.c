@@ -9,25 +9,35 @@
  */
 int main(int argc, char *argv[])
 {
-	int count, count1, sum;
+	int i;
+	unsigned int k, sum = 0;
+	char *e;
 
-	sum = 0;
-	if (argc < 1)
+	if (argc > 1)
 	{
-		printf("0");
-	}
-	for (count = 1; count < argc; count++)
-	{
-		sum += atoi(argv[count]);
-		for (count1 = 0; argv[count][count1] != '\0'; count1++)
+		for (i = 1; i < argc; i++)
 		{
-			if (!(isdigit(argv[count][count1])))
+			e = argv[i];
+
+			for (k = 0; k < strlen(e); k++)
 			{
-				printf("Error\n");
-				return (0);
+				if (e[k] < 48 || e[k] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+
+			sum += atoi(e);
+			e++;
 		}
+
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
+	else
+	{
+		printf("0\n");
+	}
+
 	return (0);
 }
