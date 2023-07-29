@@ -8,7 +8,7 @@
  * @str: Char pointer to the list_t list.
  *
  * Return: the address of the new element,
- * 		or NULL if it failed
+ *		or NULL if it failed
  */
 list_t *add_node(list_t **head, const char *str)
 {
