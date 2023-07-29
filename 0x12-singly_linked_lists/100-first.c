@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void __attribute__((constructor)) main(void);
+void __attribute__((constructor)) tortoise(void);
 
 /**
- * main - Prints a string before the
+ * tortoise - Prints a string before the
  *        main function is executed.
  */
-void main(void)
+void tortoise(void)
 {
 	printf("You're beat! and yet, you must allow,\n"
 	       "I bore my house upon my back!\n");
