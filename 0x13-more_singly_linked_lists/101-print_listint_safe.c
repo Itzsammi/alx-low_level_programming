@@ -46,5 +46,5 @@ size_t print_listint_safe(const listint_t *head)
 		exit(98);
 	}
 
-return (num_nodes);
+	return (num_nodes);
 }
