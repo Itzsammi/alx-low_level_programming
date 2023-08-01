@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * insert_nodeint_at_index - add node to listint_t linked list 
+ * insert_nodeint_at_index - add node to listint_t linked list.
  * @head: pointer to thw head of listint_t list
  * @index: index to put new node
  * @n: int to_store_in node
