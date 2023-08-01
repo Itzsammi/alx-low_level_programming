@@ -40,6 +40,11 @@ size_t print_listint_safe(const listint_t *head)
 		num_nodes++;
 		current = current->next;
 	}
+	if (num_nodes > sizeof(listint_t *) * 8)
+	{
+		fprintf(stderr, "Error: The list contains a loop\n");
+		exit(98);
+	}
 
 return (num_nodes);
 }
