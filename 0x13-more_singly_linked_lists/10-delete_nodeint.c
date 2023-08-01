@@ -7,7 +7,7 @@
  *                           index of a listint_t list.
  * @head: Head of the listint_t list.
  * @index: The index of the node to be deleted -
- * 	indices start at 0.
+ * indices start at 0.
  *
  * Return: 1 if it succeeded, -1 if it failed.
  */
