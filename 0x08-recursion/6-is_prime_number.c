@@ -1,4 +1,4 @@
-#inlude "main.h"
+#include "main.h"
 
 int check_prime(int n, int i);
 
