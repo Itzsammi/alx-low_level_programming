@@ -1,5 +1,7 @@
 #include <string.h>
 #include "lists.h"
+#include <stdlib.h>
+
 /**
 *add_node - add new to beggining of list pointed to by 'head'
 *@head: pointer to start of list
