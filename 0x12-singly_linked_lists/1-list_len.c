@@ -1,17 +1,21 @@
 #include "lists.h"
+
 /**
-*list_len - print string and length of string for each element of 'h'
-*@h: pointer to first element of list
-*Return: length of list
-*/
+ * list_len - Finds the number of elements in
+ *            a linked list_t list.
+ * @h: The linked list_t list.
+ *
+ * Return: The number of elements in h.
+ */
 size_t list_len(const list_t *h)
 {
-	size_t size = 0;
+	size_t elements = 0;
 
 	while (h)
 	{
+		elements++;
 		h = h->next;
-		++size;
 	}
-	return (size);
+
+	return (elements);
 }
