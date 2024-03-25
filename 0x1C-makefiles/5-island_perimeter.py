@@ -1,34 +1,26 @@
 #!/usr/bin/python3
-""" Module for the island_perimeter function """
+""" periemter module """
 
 
 def island_perimeter(grid):
-    """ Returns the perimeter of the island described in grid :
-
-        grid is a list of list of integers:
-            0 represents a water zone
-            1 represents a land zone
-            One cell is a square with side length 1
-            Grid cells are connected horizontally/vertically (not diagonally).
-            Grid is rectangular, width and height don’t exceed 100
-        Grid is completely surrounded by water, and there is one island (or nothing).
-        The island doesn’t have “lakes” (water inside that isn’t connected to the 
-        water around the island).
+    """ method that returns the perimeter of the island
+    described in grid
+    Args:
+        grid(list): is a list of integers
+        where 1 represents land zone and 0 water
+    grid is rectancular and width and height don't exceed the 100
+    grid is completely sorrounded by water and there is one island
+    or nothing.
+    one cell of the grid is a square with side lenght 1
     """
-
-    perimeter = 0
-
-    for row in range(len(grid)):
-        for column in range(len(grid[row])):
-            if grid[row][column] == 1:
-                perimeter += 4
-                if row > 0 and grid[row-1][column] == 1:
-                    perimeter -= 1
-                if row < len(grid) - 1 and grid[row+1][column] == 1:
-                    perimeter -= 1
-                if column > 0 and grid[row][column-1] == 1:
-                    perimeter -= 1
-                if column < len(grid[row]) - 1 and grid[row][column+1] == 1:
-                    perimeter -= 1
-
-    return perimeter
+    lands = 0
+    side = 0
+    for height in range(len(grid)):
+        for width in range(len(grid[height])):
+            if grid[height][width] == 1:
+                lands += 1
+                if height > 0 and grid[height-1][width] == 1:
+                    side += 1
+                if width > 0 and grid[height][width-1] == 1:
+                    side += 1
+    return lands * 4 - side * 2
